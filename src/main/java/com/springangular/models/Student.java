@@ -1,12 +1,28 @@
 package com.springangular.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GeneratorType;
 
-import javax.annotation.processing.Generated;
-import javax.persistence.Id;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Student {
-    @javax.persistence.Id
-    @GeneratorType(type = true)
+
+    @Id
     private Long Id;
+    @Column
+    private String firstName;
+    @Column
+    private String lastName;
+
+
 }
